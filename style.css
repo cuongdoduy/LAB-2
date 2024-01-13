@@ -1,0 +1,193 @@
+* {
+  box-sizing: inherit;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  background: white;
+}
+#top-half {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: black;
+}
+
+#bottom-half {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 209, 1) 0%,
+    rgba(151, 0, 255, 1) 100%
+  );
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px 0;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  text-align: center;
+  z-index: 5;
+  min-height: 360px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  color: #999;
+  font-size: 18px;
+  margin: 0;
+}
+
+.value {
+  color: #2c2e31;
+  font-size: 20px;
+  margin: 5px;
+}
+
+.horizozntal-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.values_list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  float: left;
+}
+
+.values_list li {
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 48px;
+  float: left;
+  margin: 20px;
+  background-image: url(https://randomuser.me/img/card_icons.png);
+  background-size: 378px;
+  background-position-y: -48px;
+  transition: all 0.25s ease-out;
+}
+
+.values_list li[data-label="name"] {
+  background-position: 0 -48px;
+}
+
+.values_list li[data-label="email"] {
+  background-position: -68px -48px;
+}
+
+.values_list li[data-label="birthday"] {
+  background-position: -135px -48px;
+}
+
+.values_list li[data-label="location"] {
+  background-position: -203px -48px;
+}
+
+.values_list li[data-label="phone"] {
+  background-position: -270px -48px;
+}
+
+.values_list li[data-label="pass"] {
+  background-position: -338px -48px;
+}
+
+.values_list li.active[data-label="phone"] {
+  background-position: -270px -96px;
+}
+
+.values_list li.active[data-label="pass"] {
+  background-position: -338px -96px;
+}
+
+.values_list li.active[data-label="location"] {
+  background-position: -203px -96px;
+}
+
+.values_list li.active[data-label="birthday"] {
+  background-position: -135px -96px;
+}
+
+.values_list li.active[data-label="email"] {
+  background-position: -68px -96px;
+}
+
+.values_list li.active[data-label="name"] {
+  background-position: 0 -96px;
+}
+
+.profile-photo {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.profile-photo img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.profile-info {
+  padding-left: 20px;
+}
+
+.profile-info h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.contact-icons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.icon {
+  display: inline-block;
+  width: 32px; /* Icon size */
+  height: 32px;
+  margin-right: 10px;
+  background-size: cover;
+}
+
+.phone-icon {
+  background-image: url("phone-icon.png");
+}
+
+.email-icon {
+  background-image: url("email-icon.png");
+}
+
+.lock-icon {
+  background-image: url("lock-icon.png");
+}
